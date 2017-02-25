@@ -26,6 +26,7 @@ public class BasicLuisDialog : LuisDialog<object>
     [LuisIntent("Booking")]
     public async Task BookingIntent(IDialogContext context, LuisResult result)
     {
+        
         await context.PostAsync($"You have reached the Booking intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
     }
