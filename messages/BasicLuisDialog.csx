@@ -24,7 +24,7 @@ public class BasicLuisDialog : LuisDialog<object>
     // Go to https://luis.ai and create a new intent, then train/publish your luis app.
     // Finally replace "MyIntent" with the name of your newly created intent in the following handler
     [LuisIntent("Booking")]
-    public async Task MyIntent(IDialogContext context, LuisResult result)
+    public async Task BookingIntent(IDialogContext context, LuisResult result)
     {
         await context.PostAsync($"You have reached the Booking intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
