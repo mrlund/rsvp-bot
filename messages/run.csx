@@ -30,6 +30,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     
         if (activity != null)
         {
+            
             // one of these will have an interface and process it
             switch (activity.GetActivityType())
             {
